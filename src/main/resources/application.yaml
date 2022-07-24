@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/acmkaznu
+    username: postgres
+    password: er@sy1
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+telegram:
+  bot:
+    username: ACMKazNuBot
+    token: 5388867079:AAFZvBvkH0zYawj07oXhUl4IBpLGkoJkWvY
+  api:
+    chat:
+      administrators: https://api.telegram.org/bot%s/getChatAdministrators?chat_id=%s
+
+codeforces:
+  user:
+    submissions:
+      url: https://codeforces.com/api/user.status?handle=%s&from=1&count=1000
+    info:
+      url: https://codeforces.com/api/user.info?handles=%s
+  contest:
+    list:
+      url: https://codeforces.com/api/contest.list?gym=false
+    standings: https://codeforces.com/api/contest.standings?contestId=%s&handles=%s&showUnofficial=true
+
+htmltoimage:
+  url: https://hcti.io/v1/image
+  userid: 2a5b794b-f286-4d44-b829-cfac42c49e10
+  apikey: 3aa518e7-400e-469c-bdbf-e3be13efff04

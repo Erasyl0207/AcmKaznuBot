@@ -1,0 +1,23 @@
+version: '1'
+services:
+  app:
+    container_name: acm-kaznu
+    image: acm-kaznu-telegram-bot
+    build: ./
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgresdb:5432/acmkaznu
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: er@sy1
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgresdb
+  postgresdb:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=er@sy1
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=acmkaznu
