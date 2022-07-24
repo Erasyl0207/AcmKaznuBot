@@ -1,16 +1,16 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/acmkaznu
-    username: postgres
-    password: er@sy1
+    url: 
+    username: 
+    password:
   jpa:
     hibernate:
       ddl-auto: update
 
 telegram:
   bot:
-    username: ACMKazNuBot
-    token: 5388867079:AAFZvBvkH0zYawj07oXhUl4IBpLGkoJkWvY
+    username: 
+    token: 
   api:
     chat:
       administrators: https://api.telegram.org/bot%s/getChatAdministrators?chat_id=%s
